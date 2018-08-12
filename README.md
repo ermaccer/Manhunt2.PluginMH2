@@ -3,7 +3,7 @@ Free camera, 60 fps patch and more!
 
 # Installation
 PluginMH2 requires https://github.com/ThirteenAG/Ultimate-ASI-Loader or https://github.com/aap/simpledllloader.
-Rename "dinput8.dll" to "**d3d9.dlL**"
+Rename "dinput8.dll" to "**d3d9.dll**"
 Check PluginMH2.ini for available features.
 
 # Controls (default)
