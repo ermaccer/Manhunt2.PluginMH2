@@ -7,8 +7,8 @@ Rename "dinput8.dll" to "**d3d9.dll**"
 Check PluginMH2.ini for available features.
 
 # Controls (default)
-**CTRL + B** - Enable Camera Control
+**CTRL + V** - Enable Camera Control
 
-**CTRL + V** - Disable Camera Control
+**CTRL + B** - Disable Camera Control
 
 **F5** - Display Player Position
