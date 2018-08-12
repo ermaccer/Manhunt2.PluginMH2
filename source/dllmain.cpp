@@ -21,6 +21,7 @@ void GetIniValues()
 	MH2ForceRatsToAppear = reader.ReadBoolean("Settings", "ForceRatsToAppear", 0);
 	MH2NoLegalScreen = reader.ReadBoolean("Settings", "DisableLegalScreen", 0);
 	MH2EnableScreenshotMode = reader.ReadBoolean("Settings", "EnableScreenshotMode", 0);
+	MH2Enable60FPSPatch = reader.ReadBoolean("Settings", "Enable60FPSPatch", 0);
 }
 
 void WINAPI Init()
@@ -33,6 +34,8 @@ void WINAPI Init()
 			// levels requires rat paths? they appear in good ending without this 
 			// patch
 			if (MH2ForceRatsToAppear) Patch(0x7942B4, 32);
+			if (MH2Enable60FPSPatch) Patch(0x40D2A3, 0x412B);
+			
 
 			if (MH2NoLegalScreen)
 			{
@@ -55,6 +58,7 @@ void WINAPI Init()
 					FreeCamera = 0; DisableHudAndFreezeWorld = 0;
 				}
 			}
+
 			Sleep(1);
 		}
 }

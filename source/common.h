@@ -11,6 +11,7 @@ int KeyMH2ShowCoordinates;
 bool MH2NoLegalScreen;
 bool MH2ForceRatsToAppear;
 bool MH2EnableScreenshotMode;
+bool MH2Enable60FPSPatch;
 
 // weird address, can glitch stuff
 // TODO: find a better one 
@@ -21,11 +22,8 @@ float& MH2PlayerX = *(float *)0x704F68;
 float& MH2PlayerY = *(float *)0x704F70;
 float& MH2PlayerZ = *(float *)0x704F6C;
 
-
-
 // Functions
 void(__cdecl *WriteDebug)(int, char*);
-
 
 bool KeyHit(unsigned int keyCode) 
 {
