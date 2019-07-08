@@ -12,6 +12,8 @@ bool MH2NoLegalScreen;
 bool MH2ForceRatsToAppear;
 bool MH2EnableScreenshotMode;
 bool MH2Enable60FPSPatch;
+bool MH2EnableGlobalAnimsIFP;
+bool MH2FunMode;
 
 // weird address, can glitch stuff
 // TODO: find a better one 
@@ -37,3 +39,29 @@ void DisplayPlayerCoords()
 	WriteDebug(10, buffer);
 }
 
+void MemPatch(void* address, void* data, int size)
+{
+	unsigned long flOld[2];
+	VirtualProtect(address, size, PAGE_EXECUTE_READWRITE, &flOld[0]);
+	memcpy(address, data, size);
+	VirtualProtect(address, size, flOld[0], &flOld[1]);
+}
+
+
+void ReplaceCall(int address, void *func)
+{
+	int temp = 0xE8;
+	MemPatch((void *)address, &temp, 1);
+	temp = (int)func - ((int)address + 5);
+	MemPatch((void *)((int)address + 1), &temp, 4);
+}
+
+void no_func() {}
+
+void ReplaceJump(int address, void *func)
+{
+	int temp = 0xE9;
+	MemPatch((void *)address, &temp, 1);
+	temp = (int)func - ((int)address + 5);
+	MemPatch((void *)((int)address + 1), &temp, 4);
+}

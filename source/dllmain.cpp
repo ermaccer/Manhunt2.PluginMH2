@@ -22,6 +22,8 @@ void GetIniValues()
 	MH2NoLegalScreen = reader.ReadBoolean("Settings", "DisableLegalScreen", 0);
 	MH2EnableScreenshotMode = reader.ReadBoolean("Settings", "EnableScreenshotMode", 0);
 	MH2Enable60FPSPatch = reader.ReadBoolean("Settings", "Enable60FPSPatch", 0);
+	MH2EnableGlobalAnimsIFP = reader.ReadBoolean("Settings", "EnableGlobalAnimsIFP ", 0);
+	MH2FunMode= reader.ReadBoolean("Settings", "EnableFunMode", 0);
 }
 
 void WINAPI Init()
@@ -35,7 +37,16 @@ void WINAPI Init()
 			// patch
 			if (MH2ForceRatsToAppear) Patch(0x7942B4, 32);
 			if (MH2Enable60FPSPatch) Patch(0x40D2A3, 0x412B);
-			
+			if (MH2EnableGlobalAnimsIFP) Patch<const char*>(0x662414, "../global/anims");
+
+			// sor3nt findings
+			if (MH2FunMode)
+			{
+				// replace models
+				Patch<int>(0x76BE40, 32);
+				// replace blood with flowers/sfx
+				Patch<char>(0x6B26E5, 0);
+			}
 
 			if (MH2NoLegalScreen)
 			{
