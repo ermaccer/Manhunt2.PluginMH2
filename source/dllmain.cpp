@@ -1,5 +1,6 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 // standalone from PluginMH
+// update: removed screenshot mode and fun stuff (something comin)
 #include "..\shared\stdafx.h"
 #include "..\shared\IniReader.h"
 #include "..\shared\MemoryMgr.h"
@@ -14,16 +15,16 @@ void GetFuncs()
 void GetIniValues()
 {
 	CIniReader reader("PluginMH2.ini");
-	KeyMH2ShowCoordinates = reader.ReadInteger("Settings", "KeyMH2ShowCoordinates", 0x74);
-	KeyMH2BaseScreenshotMode = reader.ReadInteger("Settings", "KeyMH2BaseScreenshotMode", 0x11);
-	KeyMH2EnableScreenshotMode = reader.ReadInteger("Settings", "KeyMH2EnableScreenshotMode", 0x56);
-	KeyMH2DisableScreenshotMode = reader.ReadInteger("Settings", "KeyMH2DisableScreenshotMode", 0x42);
+	//KeyMH2ShowCoordinates = reader.ReadInteger("Settings", "KeyMH2ShowCoordinates", 0x74);
+	//KeyMH2BaseScreenshotMode = reader.ReadInteger("Settings", "KeyMH2BaseScreenshotMode", 0x11);
+	//KeyMH2EnableScreenshotMode = reader.ReadInteger("Settings", "KeyMH2EnableScreenshotMode", 0x56);
+	//KeyMH2DisableScreenshotMode = reader.ReadInteger("Settings", "KeyMH2DisableScreenshotMode", 0x42);
 	MH2ForceRatsToAppear = reader.ReadBoolean("Settings", "ForceRatsToAppear", 0);
 	MH2NoLegalScreen = reader.ReadBoolean("Settings", "DisableLegalScreen", 0);
-	MH2EnableScreenshotMode = reader.ReadBoolean("Settings", "EnableScreenshotMode", 0);
+	//MH2EnableScreenshotMode = reader.ReadBoolean("Settings", "EnableScreenshotMode", 0);
 	MH2Enable60FPSPatch = reader.ReadBoolean("Settings", "Enable60FPSPatch", 0);
 	MH2EnableGlobalAnimsIFP = reader.ReadBoolean("Settings", "EnableGlobalAnimsIFP ", 0);
-	MH2FunMode= reader.ReadBoolean("Settings", "EnableFunMode", 0);
+	//MH2FunMode= reader.ReadBoolean("Settings", "EnableFunMode", 0);
 }
 
 void WINAPI Init()
@@ -38,8 +39,11 @@ void WINAPI Init()
 			if (MH2ForceRatsToAppear) Patch(0x7942B4, 32);
 			if (MH2Enable60FPSPatch) Patch(0x40D2A3, 0x412B);
 			if (MH2EnableGlobalAnimsIFP) Patch<const char*>(0x662414, "../global/anims");
-
-			// sor3nt findings
+			
+			Patch<int>(0x6992CC, 1);
+		
+			/*
+						// sor3nt findings
 			if (MH2FunMode)
 			{
 				// replace models
@@ -47,6 +51,8 @@ void WINAPI Init()
 				// replace blood with flowers/sfx
 				Patch<char>(0x6B26E5, 0);
 			}
+
+			*/
 
 			if (MH2NoLegalScreen)
 			{
@@ -56,7 +62,8 @@ void WINAPI Init()
 			}
 
 			//TODO: Disable need for Disable/Enable key
-			if (MH2EnableScreenshotMode)
+			
+			/*if (MH2EnableScreenshotMode)
 			{
 				if (KeyHit(KeyMH2BaseScreenshotMode) && KeyHit(KeyMH2EnableScreenshotMode))
 				{
@@ -68,7 +75,7 @@ void WINAPI Init()
 
 					FreeCamera = 0; DisableHudAndFreezeWorld = 0;
 				}
-			}
+			}*/
 
 			Sleep(1);
 		}
