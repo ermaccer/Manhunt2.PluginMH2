@@ -2,18 +2,44 @@
 Free camera, 60 fps patch and more! 
 
 # Installation
-PluginMH2 requires https://github.com/ThirteenAG/Ultimate-ASI-Loader or https://github.com/aap/simpledllloader.
+PluginMH2 requires https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases
 Rename "dinput8.dll" to "**d3d9.dll**"
-Check PluginMH2.ini for available features.
 
 
-# Extra info
+# Features
 
-To use global anims patch, place file called anims.ifp inside GLOBAL folder.
+### 60 FPS Patch
 
-# Controls (default)
-**CTRL + V** - Enable Camera Control
+Uncaps framelimiter to allow 60 fps gameplay.
 
-**CTRL + B** - Disable Camera Control
+### Three Level Firearms Executions
 
-**F5** - Display Player Position
+Allows firearms to perform all 3 levels of executions.
+
+### Clean Headshots
+
+Disables automatic head explosion with any firearm and locks this feature
+to Shotguns.
+
+### Decals Fix
+
+Fixes decals disappearing as soon as they collide with something.
+
+### Camera Shake
+
+Allows to disable constant camera floating
+
+### Legal Screen Skip
+
+Speeds up boot time by disabling legal screen
+
+### Rats
+
+Forces rats (cockroaches) to appear in certain levels.
+
+
+# Credits
+
+**ermaccer**
+**sor3nt**
+**MAJEST1C_R3**
