@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "pch.h"
 #include "IniReader.h"
 #include <iostream>
 #include <Windows.h>
