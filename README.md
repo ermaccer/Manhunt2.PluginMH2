@@ -41,5 +41,7 @@ Forces rats (cockroaches) to appear in certain levels.
 # Credits
 
 **ermaccer**
+
 **sor3nt**
+
 **MAJEST1C_R3**
