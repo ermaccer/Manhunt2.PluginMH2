@@ -8,6 +8,10 @@ Rename "dinput8.dll" to "**d3d9.dll**"
 
 # Features
 
+### Streaming Memory Patch
+
+Allows to adjust streaming memory limit allowing for higher quality or more content.
+
 ### 60 FPS Patch
 
 Uncaps framelimiter to allow 60 fps gameplay.
@@ -27,11 +31,11 @@ Fixes decals disappearing as soon as they collide with something.
 
 ### Camera Shake
 
-Allows to disable constant camera floating
+Allows to disable constant camera floating.
 
 ### Legal Screen Skip
 
-Speeds up boot time by disabling legal screen
+Speeds up boot time by disabling legal screen.
 
 ### Rats
 
