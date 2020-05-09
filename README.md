@@ -1,5 +1,5 @@
 # Manhunt2.PluginMH2
-Free camera, 60 fps patch and more! 
+Firearms execution restoration, 60 fps patch and more!
 
 # Installation
 PluginMH2 requires https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases
