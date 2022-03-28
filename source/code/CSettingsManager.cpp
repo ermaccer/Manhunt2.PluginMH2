@@ -14,6 +14,7 @@ void CSettingsManager::Init()
 	bEnableAllExecutionLevelsForFirearms = reader.ReadBoolean("Settings", "bEnableAllExecutionLevelsForFirearms", false);
 	bFixDisappearingDecals = reader.ReadBoolean("Settings", "bFixDisappearingDecals", false);
 	bUseGlobalAnimationFiles = reader.ReadBoolean("Settings", "bUseGlobalAnimationFiles", false);
+	bDisableExecutionCamera = reader.ReadBoolean("Settings", "bDisableExecutionCamera", false);
 
 	iStreamingMemory = reader.ReadInteger("Settings", "iStreamingMemory", 0);
 

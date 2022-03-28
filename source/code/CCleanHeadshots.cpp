@@ -4,15 +4,13 @@
 #include "..\MemoryMgr.h"
 using namespace Memory::VP;
 
-int explodeHead_ebx;
-int explodeHead_unk;
-
-
 
 void __declspec(naked) CCleanHeadshots::HookExtraWeaponCheck()
 {
 	static int explodeHead_true = 0x5097FC;
 	static int explodeHead_false = 0x5097C1;
+	static int explodeHead_ebx;
+	static int explodeHead_unk;
 
 	_asm {
 		mov explodeHead_ebx, ebx

@@ -23,7 +23,6 @@ void Init()
 		InjectHook(0x5EE9D0, CStuff::HookSetMaxNumberOfRats, PATCH_JUMP);
 	}
 
-
 	if (SettingsMgr->bEnable60FPSPatch)
 		Patch<short>(0x40D2A3, 0x412B);
 
@@ -50,6 +49,11 @@ void Init()
 		InjectHook(0x5EDE3B, CDecalsFix::Vector3Add);
 	}
 
+	if (SettingsMgr->bDisableExecutionCamera)
+	{
+		Nop(0x5B2630, 7);
+		InjectHook(0x5B2630, CStuff::DisableExecutionCamera, PATCH_JUMP);
+	}
 
 }
 

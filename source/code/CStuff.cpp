@@ -32,3 +32,30 @@ void CStuff::HeapGeneration()
 	}
 
 }
+
+void __declspec(naked) CStuff::DisableExecutionCamera()
+{
+	static int jmpContinue = 0x5B2637;
+	static int jmpFail = 0x5B2B6F;
+	if (GetHunterAboutToBeExecuted())
+	{
+		_asm {
+			jmp jmpFail
+		}
+	}
+	else
+	{
+		_asm {
+			cmp ds : 0x6EC990, 4
+			jmp jmpContinue
+		}
+	}
+}
+
+int CStuff::GetHunterAboutToBeExecuted()
+{
+	CEntity* plr = FindPlayer();
+	CEntity* hunt = *(CEntity**)((int)plr + 0x1144);
+
+	return (int)hunt;
+}

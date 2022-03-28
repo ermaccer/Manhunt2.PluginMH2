@@ -5,5 +5,6 @@ namespace CStuff {
 	int   __fastcall  HookCheckExecutionWeaponType(int ptr);
 	void HookSetMaxNumberOfRats();
 	void HeapGeneration();
-
+	void DisableExecutionCamera();
+	int GetHunterAboutToBeExecuted();
 }

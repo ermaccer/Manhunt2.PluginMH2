@@ -15,6 +15,7 @@ public:
 	bool bEnableAllExecutionLevelsForFirearms;
 	bool bFixDisappearingDecals;
 	bool bUseGlobalAnimationFiles;
+	bool bDisableExecutionCamera;
 
 	int  iStreamingMemory;
 };
