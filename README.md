@@ -57,6 +57,8 @@ Camera might be glitchy after this, just press the lookaround/first person mode 
 
 **NOTE** Manhunt 2 anims are way more dynamic than Manhunt, therefore most cinematics will not work right in first person mode, probably like 10% of executions will look OK. 
 
+**NOTE #2**: Aiming will make player transparent, not really a bug but no "fix" yet.
+
 *First person executions can be enabled by enabling bDisableExecutionCamera in the INI.*
 
 
