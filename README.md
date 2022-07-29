@@ -56,6 +56,7 @@ temporarily switch to the 360 camera, hold **Z** (can be changed in PluginMH2.in
 Camera might be glitchy after this, just press the lookaround/first person mode key again to "fix" it.
 
 **NOTE** Manhunt 2 anims are way more dynamic than Manhunt, therefore most cinematics will not work right in first person mode, probably like 10% of executions will look OK. 
+
 *first person executions can be enabled by enabling bDisableExecutionCamera in the ini*
 
 
