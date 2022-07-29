@@ -4,12 +4,16 @@
 #include "code/CStuff.h"
 #include "code/CCleanHeadshots.h"
 #include "code/CDecalsFix.h"
+#include "code/plugin/eFirstPerson.h"
 #include "MemoryMgr.h"
 
 
 using namespace Memory::VP;
 
-void NullFunc() {}
+int GenericTrueReturn() { return 1; }
+int GenericFalseReturn() { return 0; }
+void  GenericDummy() { }
+
 
 void Init()
 {
@@ -54,6 +58,9 @@ void Init()
 		Nop(0x5B2630, 7);
 		InjectHook(0x5B2630, CStuff::DisableExecutionCamera, PATCH_JUMP);
 	}
+
+	if (SettingsMgr->bFirstPersonMode)
+		eFirstPerson::Init();
 
 }
 

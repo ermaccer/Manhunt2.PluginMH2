@@ -15,8 +15,10 @@ void CSettingsManager::Init()
 	bFixDisappearingDecals = reader.ReadBoolean("Settings", "bFixDisappearingDecals", false);
 	bUseGlobalAnimationFiles = reader.ReadBoolean("Settings", "bUseGlobalAnimationFiles", false);
 	bDisableExecutionCamera = reader.ReadBoolean("Settings", "bDisableExecutionCamera", false);
+	bFirstPersonMode = reader.ReadBoolean("Settings", "bFirstPersonMode", false);
 
 	iStreamingMemory = reader.ReadInteger("Settings", "iStreamingMemory", 0);
+	iFirstPersonCameraUnlockKey = reader.ReadInteger("Settings", "iFirstPersonCameraUnlockKey", 90);
 
 
 }

@@ -25,6 +25,18 @@
     <ClCompile Include="code\CDecalsFix.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="code\manhunt2\Player.cpp">
+      <Filter>Header Files\code\manhunt2</Filter>
+    </ClCompile>
+    <ClCompile Include="code\manhunt2\Ped.cpp">
+      <Filter>Header Files\code\manhunt2</Filter>
+    </ClCompile>
+    <ClCompile Include="code\manhunt2\Scene.cpp">
+      <Filter>Header Files\code\manhunt2</Filter>
+    </ClCompile>
+    <ClCompile Include="code\plugin\eFirstPerson.cpp">
+      <Filter>Header Files\code\plugin</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -52,6 +64,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resource.h" />
+    <ClInclude Include="code\manhunt2\Player.h">
+      <Filter>Header Files\code\manhunt2</Filter>
+    </ClInclude>
+    <ClInclude Include="code\manhunt2\Ped.h">
+      <Filter>Header Files\code\manhunt2</Filter>
+    </ClInclude>
+    <ClInclude Include="code\manhunt2\core.h">
+      <Filter>Header Files\code\manhunt2</Filter>
+    </ClInclude>
+    <ClInclude Include="code\manhunt2\Entity.h">
+      <Filter>Header Files\code\manhunt2</Filter>
+    </ClInclude>
+    <ClInclude Include="code\manhunt2\Scene.h">
+      <Filter>Header Files\code\manhunt2</Filter>
+    </ClInclude>
+    <ClInclude Include="code\plugin\eFirstPerson.h">
+      <Filter>Header Files\code\plugin</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
@@ -62,6 +92,15 @@
     </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{19cbb0c8-6322-4799-8a5d-003ab5c272d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\code">
+      <UniqueIdentifier>{b71c1a37-3b1b-42d4-aedd-f02edb6b44bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\code\manhunt2">
+      <UniqueIdentifier>{52eb7a27-34a8-402e-ba9e-c779f0bbfc80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\code\plugin">
+      <UniqueIdentifier>{36f0e9a6-e8df-4b5c-8975-7cf2adfadfb1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

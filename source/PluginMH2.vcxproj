@@ -90,7 +90,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;PLUGINMH2_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;PLUGINMH2_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -107,7 +107,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;PLUGINMH2_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG;PLUGINMH2_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -125,7 +125,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;PLUGINMH2_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;PLUGINMH2_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -146,7 +146,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;PLUGINMH2_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;NDEBUG;PLUGINMH2_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -163,7 +163,13 @@
     <ClInclude Include="code\CDecalsFix.h" />
     <ClInclude Include="code\CSettingsManager.h" />
     <ClInclude Include="code\CStuff.h" />
+    <ClInclude Include="code\manhunt2\core.h" />
+    <ClInclude Include="code\manhunt2\Entity.h" />
+    <ClInclude Include="code\manhunt2\Ped.h" />
+    <ClInclude Include="code\manhunt2\Player.h" />
+    <ClInclude Include="code\manhunt2\Scene.h" />
     <ClInclude Include="code\mh2.h" />
+    <ClInclude Include="code\plugin\eFirstPerson.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="IniReader.h" />
     <ClInclude Include="pch.h" />
@@ -174,7 +180,11 @@
     <ClCompile Include="code\CDecalsFix.cpp" />
     <ClCompile Include="code\CSettingsManager.cpp" />
     <ClCompile Include="code\CStuff.cpp" />
+    <ClCompile Include="code\manhunt2\Ped.cpp" />
+    <ClCompile Include="code\manhunt2\Player.cpp" />
+    <ClCompile Include="code\manhunt2\Scene.cpp" />
     <ClCompile Include="code\mh2.cpp" />
+    <ClCompile Include="code\plugin\eFirstPerson.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="IniReader.cpp" />
     <ClCompile Include="pch.cpp">

@@ -17,7 +17,10 @@ public:
 	bool bUseGlobalAnimationFiles;
 	bool bDisableExecutionCamera;
 
+	bool bFirstPersonMode;
+
 	int  iStreamingMemory;
+	int  iFirstPersonCameraUnlockKey;
 };
 
 extern CSettingsManager* SettingsMgr;
