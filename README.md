@@ -53,7 +53,7 @@ Enable it in .ini first (**bEnableFirstPersonMode**), then while in game press t
 
 Due to how MH2 works, either a static like camera (which has no Y axis movement and restricts mouse) or 360 camera can be used at a time. To
 temporarily switch to the 360 camera, hold **Z** (can be changed in PluginMH2.ini). This will allow full mouse movement to an extend. 
-Camera might be glitchy after this, just press the lookaround/first person mode key again to "fix" it.
+Camera might be glitchy after this, just press the lookaround/first person mode key again to "fix" it. Aiming will automatically toggle 360 camera as long as aim is held.
 
 **NOTE** Manhunt 2 anims are way more dynamic than Manhunt, therefore most cinematics will not work right in first person mode, probably like 10% of executions will look OK. 
 
