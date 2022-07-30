@@ -71,6 +71,8 @@ void eFirstPerson::InputThread()
 			m_bUnlockCamera = true;
 		else
 			m_bUnlockCamera = false;
+
+		Sleep(1);
 	}
 
 }
