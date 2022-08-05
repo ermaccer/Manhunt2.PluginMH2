@@ -16,6 +16,7 @@ public:
 	bool bFixDisappearingDecals;
 	bool bUseGlobalAnimationFiles;
 	bool bDisableExecutionCamera;
+	bool bDisableCloseupTransparency;
 
 	bool bFirstPersonMode;
 

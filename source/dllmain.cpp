@@ -60,7 +60,14 @@ void Init()
 	}
 
 	if (SettingsMgr->bFirstPersonMode)
+	{
 		eFirstPerson::Init();
+		SettingsMgr->bDisableCloseupTransparency = true;
+	}
+
+
+	if (SettingsMgr->bDisableCloseupTransparency)
+		InjectHook(0x592650, GenericDummy, PATCH_JUMP);
 
 }
 
