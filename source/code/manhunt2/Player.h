@@ -7,6 +7,8 @@ public:
 	bool IsExecuting();
 	bool IsExecuteHunterAvailable();
 
+	void StartLookAround();
+
 	// random
 
 	int GetCurrentWeaponSlot();

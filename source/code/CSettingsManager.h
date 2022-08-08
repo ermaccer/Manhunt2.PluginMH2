@@ -19,6 +19,7 @@ public:
 	bool bDisableCloseupTransparency;
 
 	bool bFirstPersonMode;
+	bool bFirstPersonAutoResetCamera;
 
 	int  iStreamingMemory;
 	int  iFirstPersonCameraUnlockKey;

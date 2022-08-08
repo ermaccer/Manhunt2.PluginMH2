@@ -42,6 +42,8 @@ void eFirstPerson::LookaroundUpdate()
 	{
 		Patch<short>(0x5AC3A7, 0x840F);
 		Patch<int>(0x5AC3A9, 0xA4);
+		if (SettingsMgr->bFirstPersonAutoResetCamera)
+			plr->StartLookAround();
 	}
 	else
 	{

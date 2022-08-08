@@ -17,6 +17,11 @@ bool CPlayer::IsExecuteHunterAvailable()
 	return ptr ? true : false;
 }
 
+void CPlayer::StartLookAround()
+{
+	CallMethod<0x598D40, CPlayer*>(this);
+}
+
 int CPlayer::GetCurrentWeaponSlot()
 {
 	return *(int*)((int)this + 968);
