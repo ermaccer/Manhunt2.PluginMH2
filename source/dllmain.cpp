@@ -49,6 +49,7 @@ void Init()
 		Patch<int>(0x53FC68, 0);
 		Patch<int>(0x53FC50, 0);
 		Patch<int>(0x53FC6F, 0);
+		Patch<char>(0x6596FC, 0x00);
 	}
 
 	if (SettingsMgr->bDisableCameraShake)
