@@ -19,12 +19,12 @@ void  GenericDummy() { }
 void Init()
 {
 	SettingsMgr->Init();
-//#ifdef DEBUG
+#ifdef _DEBUG
 	AllocConsole();
 	freopen("CONIN$", "r", stdin);
 	freopen("CONOUT$", "w", stdout);
 	freopen("CONOUT$", "w", stderr);
-//#endif // DEBUG
+#endif // DEBUG
 
 
 	CStuff::HeapGeneration();
