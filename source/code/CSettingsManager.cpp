@@ -22,5 +22,5 @@ void CSettingsManager::Init()
 	iStreamingMemory = reader.ReadInteger("Settings", "iStreamingMemory", 0);
 	iFirstPersonCameraUnlockKey = reader.ReadInteger("Settings", "iFirstPersonCameraUnlockKey", 90);
 
-
+	fFOVFactor = reader.ReadFloat("Settings", "fFOVFactor", 0.0f);
 }

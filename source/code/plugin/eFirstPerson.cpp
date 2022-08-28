@@ -3,9 +3,43 @@
 #include "..\manhunt2\Scene.h"
 #include "..\manhunt2\Player.h"
 #include "..\CSettingsManager.h"
+#include "..\manhunt2\Vector.h"
+#include <iostream>
 
 bool eFirstPerson::m_bUnlockCamera = false;
 
+void SetCamPos(CVector* dst, CVector* src, CVector* adj)
+{
+	static CVector offset = { 0.0f,-0.08f, 0.0 };
+	CVector headPos = {};
+
+	CPlayer* plr = (CPlayer*)CScene::FindPlayer();
+
+	if (plr && !plr->isCrawling())
+	{
+		int head = plr->GetBoneFrame(1001);
+
+		if (head)
+		{
+			headPos = *(CVector*)(head + 176);
+
+			headPos.x += offset.x;
+			headPos.y -= (adj->y + offset.y);
+			headPos.z += offset.z;
+		}
+
+		dst->x = headPos.x + adj->x;
+		dst->y = headPos.y + adj->y;
+		dst->z = headPos.z + adj->z;;
+	}
+	else
+	{
+		dst->x = src->x + adj->x;
+		dst->y = src->y + adj->y;
+		dst->z = src->z + adj->z;
+	}
+
+}
 
 void eFirstPerson::_null()
 {
@@ -26,9 +60,11 @@ void eFirstPerson::Init()
 	Nop(0x5AB939, 6);
 
 	// move cam forward a little
-	Patch<float>(0x6D0C4C, 0.175f);
+	Patch<float>(0x6D0C4C, 0.165f);
 
-	CreateThread(nullptr, 0, reinterpret_cast<LPTHREAD_START_ROUTINE>(InputThread), nullptr, 0, nullptr);;
+	InjectHook(0x5B1E66, SetCamPos);
+
+	CreateThread(nullptr, 0, reinterpret_cast<LPTHREAD_START_ROUTINE>(InputThread), nullptr, 0, nullptr);
 }
 
 void eFirstPerson::LookaroundUpdate()

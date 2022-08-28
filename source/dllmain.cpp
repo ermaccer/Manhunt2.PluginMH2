@@ -5,6 +5,7 @@
 #include "code/CCleanHeadshots.h"
 #include "code/CDecalsFix.h"
 #include "code/plugin/eFirstPerson.h"
+#include "code/plugin/eFOVAdjustment.h"
 #include "MemoryMgr.h"
 
 
@@ -18,6 +19,13 @@ void  GenericDummy() { }
 void Init()
 {
 	SettingsMgr->Init();
+//#ifdef DEBUG
+	AllocConsole();
+	freopen("CONIN$", "r", stdin);
+	freopen("CONOUT$", "w", stdout);
+	freopen("CONOUT$", "w", stderr);
+//#endif // DEBUG
+
 
 	CStuff::HeapGeneration();
 
@@ -64,6 +72,9 @@ void Init()
 		eFirstPerson::Init();
 		SettingsMgr->bDisableCloseupTransparency = true;
 	}
+
+	if (SettingsMgr->fFOVFactor > 0.0)
+		eFOVAdjustment::Init();
 
 
 	if (SettingsMgr->bDisableCloseupTransparency)

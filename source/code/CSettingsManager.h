@@ -23,6 +23,8 @@ public:
 
 	int  iStreamingMemory;
 	int  iFirstPersonCameraUnlockKey;
+
+	float fFOVFactor;
 };
 
 extern CSettingsManager* SettingsMgr;

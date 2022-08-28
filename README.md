@@ -7,46 +7,21 @@ Extract **PluginMH2.zip** to root folder of Manhunt 2.
 
 # Features
 
-Open PluginMH2.ini with any text editor to configure PluginMH2.
-
-### Streaming Memory Patch
-
-Allows to adjust streaming memory limit allowing for higher quality or more content.
-
-### 60 FPS Patch
-
-Uncaps framelimiter to allow 60 fps gameplay.
-
-### Three Level Firearms Executions
-
-Allows firearms to perform all 3 levels of executions.
-
-### Clean Headshots
-
-Disables automatic head explosion with any firearm and locks this feature
-to Shotguns.
-
-### Decals Fix
-
-Fixes decals disappearing as soon as they collide with something.
-
-### Camera Shake
-
-Allows to disable constant camera floating.
-
-### Legal Screen Skip
-
-Speeds up boot time by disabling legal screen.
-
-### Rats
-
-Forces rats (cockroaches) to appear in certain levels.
+| Feature | Description | 
+|     ---      |   ---        | 
+| 60 FPS Patch |  Removes 30 fps cap. | 
+| Clean Headshots | Changes headshot behaviour to be more like the first Manhunt, long distance headshots can be performed and heads won't explode unless the weapon is any shotgun or sniper rifle. | 
+| Firearms Executions Unlock | Allows firearms to use all 3 execution levels.  |
+| Decals Fix | Fixes decals disappearing as soon as they hit the ground/solid object. | 
+| First Person Mode | Allows to play the game in first person perspective. | 
+| Misc. | PluginMH2 also adds several other options, this includes an option to disable camera shake, restore rats (cockroaches) and skip legal screen. FOV (field of view) can be changed too. |
 
 ### First Person Mode
 
 Allows to play the game in first person perspective.
 ![](https://i.imgur.com/1Pr2bcJ.png)
 ![](https://i.imgur.com/ppXmmsS.png)
+![](https://i.imgur.com/YsirzO9.jpg)
 
 ## Usage
 Enable it in .ini first (**bEnableFirstPersonMode**), then while in game press the lookaround/first person mode key (**T** is the default key).
@@ -55,10 +30,13 @@ Due to how MH2 works, either a static like camera (which has no Y axis movement 
 temporarily switch to the 360 camera, hold **Z** (can be changed in PluginMH2.ini). This will allow full mouse movement to an extend. 
 Camera might be glitchy after this, just press the lookaround/first person mode key again to "fix" it. Aiming will automatically toggle 360 camera as long as aim is held.
 
-**NOTE** Manhunt 2 anims are way more dynamic than Manhunt, therefore most cinematics will not work right in first person mode, probably like 10% of executions will look OK. 
+FOV can be changed in the .ini file.
 
 *First person executions can be enabled by enabling bDisableExecutionCamera in the INI.*
 
+# Notes
+
+- Firearms Execution Unlock is only a code toggle! Extra assets might be required to make this work 100%!
 
 
 

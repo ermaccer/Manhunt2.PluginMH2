@@ -168,8 +168,10 @@
     <ClInclude Include="code\manhunt2\Ped.h" />
     <ClInclude Include="code\manhunt2\Player.h" />
     <ClInclude Include="code\manhunt2\Scene.h" />
+    <ClInclude Include="code\manhunt2\Vector.h" />
     <ClInclude Include="code\mh2.h" />
     <ClInclude Include="code\plugin\eFirstPerson.h" />
+    <ClInclude Include="code\plugin\eFOVAdjustment.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="IniReader.h" />
     <ClInclude Include="pch.h" />
@@ -183,8 +185,10 @@
     <ClCompile Include="code\manhunt2\Ped.cpp" />
     <ClCompile Include="code\manhunt2\Player.cpp" />
     <ClCompile Include="code\manhunt2\Scene.cpp" />
+    <ClCompile Include="code\manhunt2\Vector.cpp" />
     <ClCompile Include="code\mh2.cpp" />
     <ClCompile Include="code\plugin\eFirstPerson.cpp" />
+    <ClCompile Include="code\plugin\eFOVAdjustment.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="IniReader.cpp" />
     <ClCompile Include="pch.cpp">

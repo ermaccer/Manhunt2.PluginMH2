@@ -37,6 +37,12 @@
     <ClCompile Include="code\plugin\eFirstPerson.cpp">
       <Filter>Header Files\code\plugin</Filter>
     </ClCompile>
+    <ClCompile Include="code\manhunt2\Vector.cpp">
+      <Filter>Header Files\code\manhunt2</Filter>
+    </ClCompile>
+    <ClCompile Include="code\plugin\eFOVAdjustment.cpp">
+      <Filter>Header Files\code\plugin</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -80,6 +86,12 @@
       <Filter>Header Files\code\manhunt2</Filter>
     </ClInclude>
     <ClInclude Include="code\plugin\eFirstPerson.h">
+      <Filter>Header Files\code\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="code\manhunt2\Vector.h">
+      <Filter>Header Files\code\manhunt2</Filter>
+    </ClInclude>
+    <ClInclude Include="code\plugin\eFOVAdjustment.h">
       <Filter>Header Files\code\plugin</Filter>
     </ClInclude>
   </ItemGroup>
